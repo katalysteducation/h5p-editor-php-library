@@ -622,6 +622,10 @@ class H5peditor {
       $is_local_only = TRUE;
       $icon_path = NULL;
 
+      if (!isset($local_lib->patch_version_in_folder_name)) {
+        $local_lib->patch_version_in_folder_name = '';
+      }
+
       // Check if icon is available locally:
       if ($local_lib->has_icon) {
         // Create path to icon:
